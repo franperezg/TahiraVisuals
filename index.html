@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tahira Visuals - Fotografía Profesional</title>
+    <link rel="icon" href="images/icon_transparent.svg" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&family=Castoro+Titling&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="js/index.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/side-bar.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home"><img src="images/main_logo.svg" alt="Tahira Visuals" class="logo-svg" /></a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Inicio</a>
+                <a href="#about" class="nav-link">Sobre mí</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="#info" class="nav-link">Info & Precios</a>
+                <a href="#contact" class="nav-link">Contacto</a>
+                <!-- Botones sociales para móvil -->
+                <div class="mobile-social-buttons">
+                    <span class="mobile-social-title">Sígueme en:</span>
+                    <div class="mobile-social-container">
+                        <a href="https://instagram.com/tahiravisuals" target="_blank"
+                            class="mobile-social-btn instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://tiktok.com/@tahiravisuals" target="_blank" class="mobile-social-btn tiktok"
+                            aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </a>
+                        <a href="https://pinterest.com/tahiravisuals" target="_blank"
+                            class="mobile-social-btn pinterest" aria-label="Pinterest">
+                            <i class="fab fa-pinterest"></i>
+                            <span>Pinterest</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Social Links -->
+    <div class="social-sidebar">
+        <!-- Línea decorativa -->
+        <div class="social-line"></div>
+        <div class="social-container">
+            <a href="https://instagram.com/tahiravisuals" target="_blank" class="social-btn instagram"
+                aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+                <span class="social-tooltip">Instagram</span>
+            </a>
+            <a href="https://tiktok.com/@tahiravisuals" target="_blank" class="social-btn tiktok" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+                <span class="social-tooltip">TikTok</span>
+            </a>
+            <a href="https://pinterest.com/tahiravisuals" target="_blank" class="social-btn pinterest"
+                aria-label="Pinterest">
+                <i class="fab fa-pinterest"></i>
+                <span class="social-tooltip">Pinterest</span>
+            </a>
+        </div>
+
+        <!-- Línea decorativa -->
+        <div class="social-line"></div>
+    </div>
+
+    <!-- Hero Section con Slideshow -->
+    <section id="home" class="hero">
+        <!-- Slideshow Background -->
+        <div class="hero-slideshow">
+            <div class="slide active" style="background-image: url('images/background_1_crop.jpg');"></div>
+            <div class="slide" style="background-image: url('images/background_2_crop.jpg');"></div>
+            <div class="slide" style="background-image: url('images/background_3_crop.jpg');"></div>
+            <div class="slide" style="background-image: url('images/background_4_crop.jpg');"></div>
+            <div class="slide" style="background-image: url('images/background_5_crop.jpg');"></div>
+        </div>
+
+        <!-- Overlay para mejorar legibilidad del texto -->
+        <div class="hero-overlay"></div>
+
+        <!-- Contenido del Hero -->
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Capturando momentos que perduran para siempre</h1>
+                <p class="hero-subtitle">Fotografía profesional con alma, creando recuerdos únicos e irrepetibles</p>
+                <div class="hero-buttons">
+                    <button class="hero-button btn-primary" onclick="window.location.href = 'portfolio.html'">Ver mi
+                        trabajo</button>
+                    <button class="hero-button btn-secondary" onclick="scrollToSection('contact')">Contáctame</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles del Slideshow -->
+        <div class="slideshow-controls">
+            <div class="slide-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+                <span class="indicator" data-slide="4"></span>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <a onclick="scrollToSection('about')">
+                <div class="scroll-arrow"></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <!-- Foto izquierda -->
+            <div class="about-photo about-photo-left">
+                <div class="photo-frame">
+                    <img class="about-image" src="/images/test_about_me_1.jpg" />
+                </div>
+            </div>
+
+            <!-- Contenido central con overlay -->
+            <div class="about-content-wrapper">
+                <div class="about-text-card">
+                    <div class="text-decoration top"></div>
+
+                    <h2 class="about-title">Hola, soy Tahira Vega</h2>
+
+                    <div class="about-text">
+                        <p class="intro-text">Fotógrafa especializada en capturar la esencia auténtica de cada momento
+                        </p>
+
+                        <p class="body-text">Mi pasión por la fotografía nació hace más de 5 años, cuando descubrí que
+                            cada click puede
+                            contar una historia única. Me especializo en crear imágenes que no solo documenten momentos,
+                            sino que capturen emociones y preserven recuerdos para toda la vida.</p>
+
+                        <p class="body-text">Creo firmemente que cada persona, cada pareja, cada familia tiene su propia
+                            luz especial. Mi
+                            trabajo es encontrar esa luz y plasmarla en imágenes que te hagan revivir esos momentos
+                            perfectos una y otra vez.</p>
+
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-number">8+</span>
+                                <span class="highlight-text">Años de experiencia</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-number">100+</span>
+                                <span class="highlight-text">Historias capturadas</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-number">24hs</span>
+                                <span class="highlight-text">Adelanto Fotos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-decoration bottom"></div>
+                </div>
+            </div>
+
+            <!-- Foto derecha -->
+            <div class="about-photo about-photo-right">
+                <div class="photo-frame">
+                    <img class="about-image" src="/images/test_about_me_2.jpg" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <!-- Grid de fotos como fondo -->
+        <div class="portfolio-background-grid" id="portfolio-grid">
+            <!-- Foto 1 - Fiestas -->
+            <div class="portfolio-photo fiestas" data-category="fiestas">
+                <div class="photo-overlay"></div>
+                <div class="portfolio-image fiestas-bg"></div>
+                <div class="photo-label fiestas-label">
+                    <span class="vertical-text">Fiestas</span>
+                </div>
+            </div>
+            <!-- Foto 2 - Eventos -->
+            <div class="portfolio-photo eventos" data-category="eventos">
+                <div class="photo-overlay"></div>
+                <div class="portfolio-image eventos-bg"></div>
+                <div class="photo-label eventos-label">
+                    <span class="vertical-text">Eventos</span>
+                </div>
+            </div>
+            <!-- Foto 3 - Retratos -->
+            <div class="portfolio-photo retratos" data-category="retratos">
+                <div class="photo-overlay"></div>
+                <div class="portfolio-image retratos-bg"></div>
+                <div class="photo-label retratos-label">
+                    <span class="vertical-text">Retratos</span>
+                </div>
+            </div>
+        </div>
+        <!-- Contenido superpuesto -->
+        <div class="portfolio-overlay-content">
+            <div class="portfolio-content">
+                <!-- Sección superior - Título -->
+                <div class="portfolio-header">
+                    <h2 class="portfolio-title">Tu nueva <span class="highlight-word">EXPERIENCIA</span></h2>
+                </div>
+
+                <!-- Sección inferior - Botón -->
+                <div class="portfolio-footer">
+                    <a href="portfolio.html" class="portfolio-btn" id="portfolio-btn">
+                        <span class="btn-text">Conoce mi trabajo</span>
+                        <span class="btn-arrow">></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Líneas decorativas en esquinas -->
+        <div class="corner-decorations">
+            <div class="corner-lines top-left">
+                <div class="line line-horizontal"></div>
+            </div>
+            <div class="corner-lines bottom-right">
+                <div class="line line-horizontal"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info & Pricing Section -->
+    <section id="info" class="info-section">
+        <div class="info-content">
+            <!-- Process -->
+            <section class="process-section" id="process">
+                <div class="process-container">
+                    <!-- Header de la sección -->
+                    <div class="process-header">
+                        <h2 class="process-main-title">¿Cómo funciona el proceso?</h2>
+                    </div>
+
+                    <!-- Pasos del proceso -->
+                    <div class="process-steps">
+                        <div class="step-container">
+                            <div class="step">
+                                <div class="step-number">01</div>
+                                <h3 class="step-title">Todo comienza con un email</h3>
+                                <p class="step-description">
+                                    Envíame un mensaje contándome todos los detalles que buscas en tu sesión
+                                    para asegurarme de que soy la fotógrafa ideal para ti.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="step-container">
+                            <div class="step">
+                                <div class="step-number">02</div>
+                                <h3 class="step-title">Vamos a planificar y estrategizar</h3>
+                                <p class="step-description">
+                                    Una vez que tengamos una fecha confirmada, charlemos sobre los detalles.
+                                    Quiero que tus imágenes reflejen tus esperanzas y objetivos.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="step-container">
+                            <div class="step">
+                                <div class="step-number">03</div>
+                                <h3 class="step-title">Tenemos una sesión increíble</h3>
+                                <p class="step-description">
+                                    ¡Finalmente llegó tu gran día! Relájate, yo hago que sea fácil y divertido.
+                                    Te prometo que saldrás sonriendo y emocionada.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="step-container">
+                            <div class="step">
+                                <div class="step-number">04</div>
+                                <h3 class="step-title">Post-producción y entrega</h3>
+                                <p class="step-description">
+                                    Edición cuidadosa de tus imágenes y entrega de la galería final
+                                    para que puedas revivir esos momentos especiales para siempre.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pricing-section" id="pricing">
+                <div class="pricing-type retratos">
+                    <div class="pricing-container retratos">
+                        <!-- Contenido izquierdo -->
+                        <div class="pricing-content">
+                            <h2 class="pricing-category">Retratos</h2>
+                            <p class="pricing-description">
+                                Fotos senior, parejas, sesiones familiares, imágenes de maternidad, boudoir,
+                                o tal vez sin ocasión especial y solo buscas capturar tus momentos en el tiempo.
+                            </p>
+
+                            <!-- Grid de paquetes -->
+                            <div class="pricing-packages">
+                                <!-- Paquete 3 - Amplio -->
+                                <div class="package">
+                                    <div class="package-header">
+                                        <h3 class="package-name">Paquete Premium <span
+                                                class="package-price">$1200</span>
+                                        </h3>
+                                    </div>
+                                    <ul class="package-features">
+                                        <li>Consulta personalizada</li>
+                                        <li>120 min - 3 locaciones/zonas</li>
+                                        <li>5-6 opciones de outfit</li>
+                                        <li>50 imágenes editadas</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Precio principal y CTA -->
+                            <div class="pricing-main">
+                                <div class="pricing-cta-container">
+                                    <a href="#contact" class="pricing-cta">
+                                        <span class="pricing-cta-text">Reservar ahora</span>
+                                        <span class="pricing-cta-arrow">></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contenido derecha -->
+                        <div class="pricing-photo">
+                            <div class="pricing-photo-frame">
+                                <img src="images/background_retratos.webp"
+                                    alt="Sesión de retratos en la playa - Tahira Visuals">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-type eventos">
+                    <div class="pricing-container eventos">
+                        <!-- Contenido derecha -->
+                        <div class="pricing-photo">
+                            <div class="pricing-photo-frame">
+                                <img src="images/background_retratos.webp"
+                                    alt="Sesión de retratos en la playa - Tahira Visuals">
+                            </div>
+                        </div>
+
+                        <!-- Contenido izquierdo -->
+                        <div class="pricing-content">
+                            <h2 class="pricing-category">Retratos</h2>
+                            <p class="pricing-description">
+                                Fotos senior, parejas, sesiones familiares, imágenes de maternidad, boudoir,
+                                o tal vez sin ocasión especial y solo buscas capturar tus momentos en el tiempo.
+                            </p>
+
+                            <!-- Grid de paquetes -->
+                            <div class="pricing-packages">
+                                <!-- Paquete 1 -->
+                                <div class="package">
+                                    <div class="package-header">
+                                        <h3 class="package-name">Paquete 1 <span class="package-price">$650</span></h3>
+                                    </div>
+                                    <ul class="package-features">
+                                        <li>Consulta</li>
+                                        <li>45-60 min - 1 locación/zona</li>
+                                        <li>2 opciones de outfit</li>
+                                        <li>20 imágenes editadas</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Paquete 2 - Destacado -->
+                                <div class="package featured">
+                                    <div class="package-header">
+                                        <h3 class="package-name">Paquete 2 <span class="package-price">$900</span></h3>
+                                    </div>
+                                    <ul class="package-features">
+                                        <li>Consulta</li>
+                                        <li>75-90 min - 2 locaciones/zonas</li>
+                                        <li>3-4 opciones de outfit</li>
+                                        <li>30 imágenes editadas</li>
+                                    </ul>
+                                </div>
+                                <!-- Paquete 3 - Amplio -->
+                                <div class="package">
+                                    <div class="package-header">
+                                        <h3 class="package-name">Paquete Premium <span
+                                                class="package-price">$1200</span>
+                                        </h3>
+                                    </div>
+                                    <ul class="package-features">
+                                        <li>Consulta personalizada</li>
+                                        <li>120 min - 3 locaciones/zonas</li>
+                                        <li>5-6 opciones de outfit</li>
+                                        <li>50 imágenes editadas</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Precio principal y CTA -->
+                            <div class="pricing-main">
+                                <div class="pricing-cta-container">
+                                    <a href="#contact" class="pricing-cta">
+                                        <span class="pricing-cta-text">Reservar ahora</span>
+                                        <span class="pricing-cta-arrow">></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contáctame</h2>
+                <p class="section-subtitle">
+                    ¿Listo para crear algo increíble juntos?
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Trabajemos juntos</h3>
+                    <p>
+                        Cada proyecto es único y especial. Me encantaría conocer tu
+                        historia y ayudarte a capturar esos momentos que importan.
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>tahira@tahiravisuals.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ciudad, País</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Tu email" required />
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="bodas">Bodas</option>
+                            <option value="retratos">Retratos</option>
+                            <option value="polas">Polaroids</option>
+                            <option value="eventos">Eventos</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto..." rows="5"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Enviar mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <p class="section-subtitle">Respuestas a las dudas más comunes</p>
+            </div>
+
+            <div class="faq-content">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Cuánto tiempo toma recibir las fotos?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Para eventos y bodas, entrego las fotos en 2-3 semanas. Para
+                            sesiones de retratos y polaroids, el tiempo de entrega es de 1-2
+                            semanas. Siempre proporciono un adelanto de 10-15 fotos editadas
+                            dentro de las primeras 48 horas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Incluyes la edición en el precio?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Sí, todos mis paquetes incluyen edición profesional. Esto abarca
+                            corrección de color, ajustes de exposición, retoque básico y mi
+                            estilo de edición característico que da vida a cada imagen.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Viajas para sesiones fuera de la ciudad?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            ¡Por supuesto! Me encanta viajar para capturar momentos
+                            especiales. Para sesiones fuera de la ciudad, se incluyen gastos
+                            de transporte y, en caso de ser necesario, alojamiento.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Qué pasa si llueve el día de la sesión?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Siempre tengo planes B preparados. Podemos reprogramar sin costo
+                            adicional o buscar locaciones cubiertas. La lluvia también puede
+                            crear oportunidades únicas para fotos dramáticas si estás
+                            dispuesto/a.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Proporcionas las fotos sin editar?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Generalmente entrego solo las fotos editadas, ya que representan
+                            mi visión artística completa. Sin embargo, puedo hacer
+                            excepciones en casos especiales mediante acuerdo previo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Puedo solicitar estilos específicos de edición?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            ¡Absolutamente! Durante nuestra consulta inicial, discutimos tus
+                            preferencias de estilo. Puedo adaptar mi edición para que
+                            coincida con tu visión mientras mantengo la calidad profesional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Logo circular sobresaliente -->
+        <div class="footer-logo-section">
+            <div class="footer-logo-container">
+                <img src="images/footer_logo.svg" alt="Footer Logo" />
+            </div>
+        </div>
+
+        <!-- Galería horizontal de imágenes -->
+        <div class="footer-gallery">
+            <div class="footer-gallery-container">
+                <div class="footer-gallery-image">
+                    <img src="images/footer-images/59.jpg" alt="Fotografía 1">
+                </div>
+                <div class="footer-gallery-image">
+                    <img src="images/footer-images/59.jpg" alt="Fotografía 2">
+                </div>
+                <div class="footer-gallery-image">
+                    <img src="images/footer-images/59.jpg" alt="Fotografía 3">
+                </div>
+                <div class="footer-gallery-image">
+                    <img src="images/footer-images/59.jpg" alt="Fotografía 4">
+                </div>
+                <div class="footer-gallery-image">
+                    <img src="images/footer-images/59.jpg" alt="Fotografía 5">
+                </div>
+                <div class="footer-gallery-image">
+                    <img src="images/footer-images/59.jpg" alt="Fotografía 6">
+                </div>
+                <div class="footer-gallery-image">
+                    <img src="images/footer-images/59.jpg" alt="Fotografía 7">
+                </div>
+                <div class="footer-gallery-image">
+                    <img src="images/footer-images/59.jpg" alt="Fotografía 8">
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido principal del footer -->
+        <div class="footer-content">
+            <div class="footer-main-container">
+                <!-- Frase izquierda -->
+                <div class="footer-tagline">
+                </div>
+
+                <!-- Back to top central -->
+                <div class="footer-back-to-top">
+                    <button class="footer-back-to-top-btn" id="footerBackToTop" aria-label="Volver al inicio">
+                        <i class="fas fa-chevron-up"></i>
+                    </button>
+                    <span class="footer-back-to-top-text">Back to Top</span>
+                </div>
+
+                <!-- Redes sociales derecha -->
+                <div class="footer-social">
+                    <div class="footer-social-links">
+                        <a href="#" class="footer-social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Pinterest">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p class="footer-copyright">&copy; 2025 Tahira Visuals. Todos los derechos reservados.</p>
+                <p class="footer-signature">Fotografías por Tahira Visuals</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
